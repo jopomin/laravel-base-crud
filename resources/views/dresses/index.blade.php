@@ -32,4 +32,5 @@
             @endforeach
         </tbody>
     </table>
+    <a href="{{ route('dresses.create') }}">Insert New Dress</a>
 @endsection
