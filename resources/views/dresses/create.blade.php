@@ -9,27 +9,32 @@
 
         <div>
             <label for="name">Name</label>
-            <input type="text" id="name">
+            <input type="text" name="name" id="name">
         </div>
 
         <div>
             <label for="brand">Brand</label>
-            <input type="text" id="brand">
+            <input type="text" name="brand" id="brand">
         </div>
 
         <div>
             <label for="designer">Designer</label>
-            <input type="text" id="designer">
+            <input type="text" name="designer" id="designer">
         </div>
 
         <div>
-            <label for="color">Name</label>
-            <input type="text" id="color">
+            <label for="color">Color</label>
+            <input type="text" name="color" id="color">
         </div>
 
         <div>
-            <label for="size">Brand</label>
-            <input type="text" id="size">
+            <label for="size">Size</label>
+            <input type="text" name="size" id="size">
+        </div>
+
+        <div>
+            <label for="price">Price</label>
+            <input type="number" name="price" id="price">
         </div>
 
         <button type="submit">Add Dress</button>
