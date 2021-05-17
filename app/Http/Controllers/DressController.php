@@ -40,6 +40,15 @@ class DressController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+
+        $request->validate([
+            'name' => 'required|unique:dresses|max:255',
+            'brand' => 'required|max:50',
+            'designer' => 'required|max:50',
+            'color' => 'required|max:50',
+            'size' => 'required|max:5',
+        ]);
+
         $new_dress = new Dress();
         $new_dress->name = $data['name'];
         $new_dress->brand = $data['brand'];
@@ -71,7 +80,7 @@ class DressController extends Controller
      */
     public function edit(Dress $vestiti)
     {
-        return view('dresses.edit');
+        return view('dresses.edit', compact('vestiti'));
     }
 
     /**
@@ -83,7 +92,7 @@ class DressController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return "sono il metodo update";
     }
 
     /**

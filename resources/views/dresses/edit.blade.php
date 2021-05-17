@@ -11,38 +11,38 @@
 @endif
     
 @section('content')
-    <form action="{{ route('dresses.store') }}" method="post">
+    <form action="{{ route('dresses.update', $vestiti->id) }}" method="post">
         @csrf
-        @method('POST')
+        @method('PUT')
 
         <div>
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name">
+            <label for="name">EDIT Name</label>
+            <input type="text" name="name" id="name" value="{{ $vestiti['name']}}">
         </div>
 
         <div>
             <label for="brand">Brand</label>
-            <input type="text" name="brand" id="brand">
+            <input type="text" name="brand" id="brand" value="{{ $vestiti['brand'] }}">
         </div>
 
         <div>
             <label for="designer">Designer</label>
-            <input type="text" name="designer" id="designer">
+            <input type="text" name="designer" id="designer" value="{{ $vestiti['designer'] }}">
         </div>
 
         <div>
             <label for="color">Color</label>
-            <input type="text" name="color" id="color">
+            <input type="text" name="color" id="color" value="{{ $vestiti['color'] }}">
         </div>
 
         <div>
             <label for="size">Size</label>
-            <input type="text" name="size" id="size">
+            <input type="text" name="size" id="size" value="{{ $vestiti['size'] }}">
         </div>
 
         <div>
             <label for="price">Price</label>
-            <input type="number" name="price" id="price">
+            <input type="number" name="price" id="price" value="{{ $vestiti['price'] }}">
         </div>
 
         <button type="submit">Add Dress</button>

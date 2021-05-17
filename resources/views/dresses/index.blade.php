@@ -25,8 +25,9 @@
                     <td>{{  $vestito['designer']  }}</td>
                     <td>{{  $vestito['color']  }}</td>
                     <td>{{  $vestito['size']  }}</td>
+                    <td>{{  $vestito['price']  }}</td>
                     <td>
-                        <a href="{{  route('dresses.show', ['dress' => $vestito['id']])  }}">Price</a>
+                        <a href="{{  route('dresses.edit', $vestito['id'])  }}">Modifica</a>
                     </td>
                 </tr>
             @endforeach
